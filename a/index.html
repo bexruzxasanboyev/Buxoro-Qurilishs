@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buxoro Qurilish</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body,
+        html {
+            overflow-x: hidden
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .hero {
+            padding-top: 15px;
+            padding-bottom: 29px
+        }
+
+        .hero__container {
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 0 10px;
+            position: relative;
+            color: white;
+            display: flex;
+            flex-direction: column
+        }
+
+        .hero__top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 13px;
+        }
+
+        .hero__top-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .hero__top p {
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+        }
+
+        .hero__title {
+            font-family: Kuunari, sans-serif;
+            font-weight: 700;
+            font-size: clamp(26px, 8vw, 34px);
+            line-height: 125%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 36px;
+        }
+
+        .hero__title span {
+            color: #00B167;
+        }
+
+        .hero__content {
+            position: relative;
+        }
+
+        .hero__left {}
+
+        .hero__offer {
+            padding: 8px;
+            background-color: #0D7449;
+            border-radius: 5px;
+            max-width: 198px;
+            width: 100%;
+            margin-bottom: 21px;
+        }
+
+        .hero__offer p {
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: clamp(12.5px, 4vw, 14px);
+            line-height: 150%;
+        }
+
+        .hero__list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            list-style: none;
+            margin-bottom: 17px;
+        }
+
+        .hero__list-item {
+            display: flex;
+            gap: 7px;
+        }
+
+        .hero__list-item p {
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: clamp(11px, 3.7vw, 14px);
+            line-height: 20px;
+        }
+
+        .timer {
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 100%;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            margin-left: 30px;
+        }
+
+        .hero__speaker {
+            position: absolute;
+            top: -15px;
+            z-index: 3;
+            max-width: clamp(230px, 71vw, 260px);
+            width: 100%;
+            height: auto;
+            left: clamp(142px, 44vw, 210px);
+        }
+
+        .hero__bg {
+            position: absolute;
+            top: -15px;
+            left: 210px;
+        }
+
+        .hero__btn {
+            max-width: 353px;
+            width: 100%;
+            background: linear-gradient(270deg, #FECC63 3.64%, #FFE7B9 40.8%, #FED48C 91.15%);
+            box-shadow: 0px 4px 0px 0px #CCA665;
+            position: relative;
+            z-index: 4;
+            text-decoration: none;
+            padding: 31px 0;
+            font-family: Kuunari, sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 100%;
+            letter-spacing: 5%;
+            color: #3C2E19;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero__hint {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero__hint p {
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+        }
+
+        .hero__gift {
+            margin-top: 36px;
+            max-width: 364px;
+            width: 100%;
+            border: 1.5px solid #0D7449;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            gap: 5px;
+        }
+
+        .hero__gift-info h2 {
+            font-family: Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .hero__gift-info p {
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: clamp(12px, 3.3vw, 16px);
+            line-height: 150%;
+        }
+
+        @media (max-width:370px) {
+            .hero__gift {
+                max-width: 310px;
+            }
+            .hero__btn {
+                padding: 25px 0;
+            }
+            .hero__list-item {
+                gap: 5px;
+            }
+        }
+
+        @media (max-width:340px) {
+            .hero__speaker {
+                top: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css">
+    </noscript>
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="hero__container">
+
+                <div class="hero__top">
+                    <div class="hero__top-item">
+                        <img loading="lazy" decoding="async" src="./images/calendar.avif" width="20" height="20"
+                            alt="calendar">
+                        <p>27-Mart</p>
+                    </div>
+
+                    <div class="hero__top-item">
+                        <img loading="lazy" decoding="async" src="./images/clock.avif" width="20" height="20"
+                            alt="clock">
+                        <p>Soat: 20:00</p>
+                    </div>
+                </div>
+
+                <h1 class="hero__title">
+                    Shov-shuvlarga sabab <br>
+                    bo'lgan <span>Baxtiyor Zaripovdan <br> Anor Residence</span>
+                    kottedjlari
+                </h1>
+
+                <div class="hero__content">
+
+                    <div class="hero__left">
+
+                        <div class="hero__offer">
+                            <p>Birinchi 10 ta xaridorlarimiz <br> uchun 6 000$ real chegirma!</p>
+                        </div>
+
+                        <ul class="hero__list">
+                            <li class="hero__list-item">
+                                <img loading="lazy" decoding="async" src="./images/verfiy.avif" width="21" height="21"
+                                    alt="verfiy">
+                                <p>Loyihaning to‘liq taqdimoti <br> render, <b>reja va infratuzilma</b></p>
+                            </li>
+
+                            <li class="hero__list-item">
+                                <img loading="lazy" decoding="async" src="./images/verfiy.avif" width="21" height="21"
+                                    alt="verfiy">
+                                <p>Narxlar, <b>bo‘lib to‘lash</b> va <br> <b>boshlang‘ich to‘lov</b> shartlari</p>
+                            </li>
+
+                            <li class="hero__list-item">
+                                <img loading="lazy" decoding="async" src="./images/verfiy.avif" width="21" height="21"
+                                    alt="verfiy">
+                                <p>Birinchi xaridorlarimizga <br> <b>maishiy texnika  to’plamlarini <br>  sovg’a
+                                        qilamiz</b></p>
+                            </li>
+                        </ul>
+
+                        <div class="timer"></div>
+                    </div>
+
+                    <div class="hero__right">
+                        <img class="hero__speaker" width="260" height="369" loading="lazy" decoding="async"
+                            src="../images/speaker.avif" alt="speaker">
+                        <img class="hero__bg" width="295" height="399" loading="lazy" decoding="async"
+                            src="./images/bg.avif" alt="bg">
+                    </div>
+
+                </div>
+
+                <a class="hero__btn" href="#">BEPUL QATNASHISH</a>
+
+                <div class="hero__hint">
+                    <p>Bepul qatnashish uchun bosing</p>
+                    <img loading="lazy" decoding="async" src="./images/arrow.avif" width="68" height="68" alt="arrow">
+                </div>
+
+                <div class="hero__gift">
+                    <img loading="lazy" decoding="async" src="./images/gift.avif" width="100" height="98" alt="gift">
+                    <div class="hero__gift-info">
+                        <h2>maxsus sovg’a</h2>
+                        <p>Birinchi 10 ta xaridorlarimiz uchun <br><b>6 000$ real chegirma!</b></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script defer>
+        let time = 120; const timer = document.querySelector(".timer"); function updateTimer() { let e = Math.floor(time / 60), t = time % 60; e = e < 10 ? "0" + e : e, t = t < 10 ? "0" + t : t, timer.textContent = `${e}:${t}`, time > 0 ? time-- : clearInterval(interval) } updateTimer(); const interval = setInterval(updateTimer, 1e3);
+    </script>
+</body>
+
+</html>

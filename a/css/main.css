@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Kuunari";
+    src: url(../font/kuunari-bold-subset.v2.woff2);
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: Helvetica;
+    src: url(../font/HelveticaNeueBold-subset-AZa-z-09-punct-$-apostrophe-colon.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: Helvetica;
+    src: url(../font/Helvetica-subset.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+
